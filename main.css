@@ -1,0 +1,86 @@
+@font-face {
+	font-family: 'Precious';
+	src: local('Precious'), url(./fonts/Precious.ttf) format('truetype');
+	
+  }
+@font-face{
+  font-family: 'LittleLordFontleroyNF';
+	src: local('LittleLordFontleroyNF'), url(./fonts/LittleLordFontleroyNF.ttf) format('truetype');
+}
+@font-face{
+	font-family: 'Quikhand';
+	  src: local('Quikhand'), url(./fonts/Quikhand.ttf) format('truetype');
+  }
+
+body{
+	background-color: #660000;
+}
+.container{
+	width:800px;
+	padding-top:100px;
+	padding-left:20%;
+	padding-right: 20%;
+	display: block;
+	
+}
+
+#left-side {
+	background-color:white;
+	width: 350px;
+}
+#right-side {
+	background-color: gold;
+	width: 450px;
+	padding-top:10px;
+	padding-bottom:10px;
+	float:right;
+}
+#left-side, #right-side {
+	display:inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	height: 400px;
+	padding: 50px;
+}
+.FormField{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#email {
+	margin-left:40px;
+}
+
+#password{
+	margin-left:26px;
+}
+#button{
+	margin: center;
+}
+
+#heading{
+	color: #660000;
+	font-family: Precious;
+	text-align: center;
+	font-size: 32px;
+}
+
+#store-name{
+	color:#660000;
+	font-weight: bolder;
+	text-align: center;
+	font-family: LittleLordFontleroyNF;
+	font-size: 40px;
+}
+#password-link{
+	margin-left: 35px;
+}
+.FormField_label{
+	font-family: Quikhand;
+}
+a{
+	text-decoration: none;
+}
+#button{
+	margin-left:30%;
+}
