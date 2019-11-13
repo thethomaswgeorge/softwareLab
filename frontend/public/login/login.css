@@ -1,15 +1,15 @@
 @font-face {
 	font-family: 'Precious';
-	src: local('Precious'), url(./fonts/Precious.ttf) format('truetype');
+	src: local('Precious'), url(../../../fonts/Precious.ttf) format('truetype');
 	
   }
 @font-face{
   font-family: 'LittleLordFontleroyNF';
-	src: local('LittleLordFontleroyNF'), url(./fonts/LittleLordFontleroyNF.ttf) format('truetype');
+	src: local('LittleLordFontleroyNF'), url(../../../fonts/LittleLordFontleroyNF.ttf) format('truetype');
 }
 @font-face{
 	font-family: 'Quikhand';
-	  src: local('Quikhand'), url(./fonts/Quikhand.ttf) format('truetype');
+	  src: local('Quikhand'), url(../../../fonts/Quikhand.ttf) format('truetype');
   }
 
 body{
