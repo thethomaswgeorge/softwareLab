@@ -2,29 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Single page web app using Angularjs</title>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <title>MSU Blockchain Store</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<div>
-    <div>
-        <nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="/about">About us</a></li>
-                <li><a href="/contact">Contact us</a></li>
-            </ul>
-        </nav>
+    <div align="center">
+        <div class="jumbotron">
+            <h1>MSU Blockchain Store</h1>
+            <p>Welcome to the MSU Blockchain Store.</p>
+        </div>
+        <br/>
+
+        <h3><i>Catalog</i></h3>
+
+        <div class="store">
+            <div class="card-group">
+                <div class="card">
+                    <img src="../resources/food.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Food</h5>
+                        <p class="card-text">$5</p>
+                        <p class="card-text">Delicious food!</p>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" aria-label="Blockchain">
+                    </div>
+
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Purchase</a>
+                </div>
+                <div class="card">
+                    <img src="../resources/book.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Book</h5>
+                        <p class="card-text">$12</p>
+                        <p class="card-text">Exciting book!</p>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" aria-label="Blockchain">
+                    </div>
+
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Purchase</a>
+                </div>
+                <div class="card">
+                    <img src="../resources/drink.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Drink</h5>
+                        <p class="card-text">$2</p>
+                        <p class="card-text">Thirst-quenching drink!</p>
+                    </div>
+                    <div class="input-group mb-3 col-8 center">
+                        <input type="text" class="form-control" aria-label="Blockchain">
+                    </div>
+
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Purchase</a>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="search">
+            <h3><i>Search for transaction</i></h3>
+            <br/>
+
+            <div class="id-search">
+                <h4>ID:</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="TransactionID">
+                </div>
+            </div>
+
+            <div class="date-search">
+                <h4>Date:</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="TransactionID">
+                </div>
+            </div>
+
+            <a class="btn btn-primary btn-lg" href="#" role="button">Search</a>
+        </div>
     </div>
-    <br/>
-    <div class="jumbotron"> <p>
-        This is place to put content. You can put slider, short description about your website and place some links for navigation.
-    </p></div>
-</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
