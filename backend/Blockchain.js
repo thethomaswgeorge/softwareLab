@@ -33,7 +33,20 @@ class blockChain{
         return this.chain[index];
     }
     findDates(date1, date2){
-        
+        let range1 = Date.parse(date1);
+        let range2 = Date.parse(date2);
+        this.transactionList = [];
+        for (let i = 1; i < this.chain.length; i++){
+            const currentBlock = this.chain[i];
+
+            // This could be completely wrong
+            // I'm trying to test for range1 <= currentBlock.timestamp <= range2
+            if (currentBlock.timestamp >= range1){
+                if (currentBlock.timestamp <= range2){
+                    this.transactionList.push(currentBlock);
+                }
+            }
+        }
     }
     isChainValid(){
         for (let i = 1; i < this.chain.length; i++){
