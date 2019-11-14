@@ -5,6 +5,7 @@
     <title>MSU Blockchain Store</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 </head>
 <body>
     <div align="center">
@@ -18,8 +19,8 @@
 
         <div class="store">
             <div class="card-group">
-                <div class="card">
-                    <img src="../resources/food.jpg" class="card-img-top">
+                <div class="card centered-card">
+                    <img src="food.jpg" class="card-img-top" width="500" height="500"/>
                     <div class="card-body">
                         <h5 class="card-title">Food</h5>
                         <p class="card-text">$5</p>
@@ -32,26 +33,26 @@
                     <a class="btn btn-primary btn-lg" href="#" role="button">Purchase</a>
                 </div>
                 <div class="card">
-                    <img src="../resources/book.jpg" class="card-img-top">
+                    <img src="book.jpg" class="card-img-top" width="500" height="500"/>
                     <div class="card-body">
                         <h5 class="card-title">Book</h5>
                         <p class="card-text">$12</p>
                         <p class="card-text">Exciting book!</p>
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 text-center">
                         <input type="text" class="form-control" aria-label="Blockchain">
                     </div>
 
                     <a class="btn btn-primary btn-lg" href="#" role="button">Purchase</a>
                 </div>
                 <div class="card">
-                    <img src="../resources/drink.png" class="card-img-top">
+                    <img src="drink.png" class="card-img-top" width="500" height="500"/>
                     <div class="card-body">
                         <h5 class="card-title">Drink</h5>
                         <p class="card-text">$2</p>
                         <p class="card-text">Thirst-quenching drink!</p>
                     </div>
-                    <div class="input-group mb-3 col-8 center">
+                    <div class="input-group mb-3">
                         <input type="text" class="form-control" aria-label="Blockchain">
                     </div>
 
@@ -66,15 +67,16 @@
 
             <div class="id-search">
                 <h4>ID:</h4>
-                <div class="input-group mb-3">
+                <div class="input-group mb-3 col-3">
                     <input type="text" class="form-control" aria-label="TransactionID">
                 </div>
             </div>
 
             <div class="date-search">
-                <h4>Date:</h4>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" aria-label="TransactionID">
+                <h4>Date Range:</h4>
+                <div class="input-group mb-3 col-3">
+                   <input id="startDate" type="date" class="form-control" aria-label="date" placeholder="Start Date"/>
+                   <input id="endDate" type="date" class="form-control" aria-label="date" placeholder="End Date"/>
                 </div>
             </div>
 
@@ -82,6 +84,9 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/js-datepicker">
+
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
