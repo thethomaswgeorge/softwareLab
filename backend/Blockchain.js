@@ -6,7 +6,7 @@ class Block{
         this.timestamp = timestamp;
         this.amount = amount;
         this.previousHash = previousHash;
-        this.hash = generateHash();
+        this.hash = this.generateHash();
     }
 
     generateHash(){
@@ -38,15 +38,13 @@ class blockChain{
         this.transactionList = [];
         for (let i = 1; i < this.chain.length; i++){
             const currentBlock = this.chain[i];
+            let time = Date.parse(currentBlock.timestamp);
 
-            // This could be completely wrong
-            // I'm trying to test for range1 <= currentBlock.timestamp <= range2
-            if (currentBlock.timestamp >= range1){
-                if (currentBlock.timestamp <= range2){
-                    this.transactionList.push(currentBlock);
-                }
+            if (time >= range1 && time <= range2){
+                this.transactionList.push(currentBlock);
             }
         }
+        return(this.transactionList);
     }
     isChainValid(){
         for (let i = 1; i < this.chain.length; i++){
@@ -63,4 +61,6 @@ class blockChain{
         return true;
     }
 }
+
+
 
