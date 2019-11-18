@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>MSU Blockchain Store</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+    <link rel="stylesheet" href="frontend/index.css">
+    <style>
+    .search {
+    display: inline-block;;
+}
+.search h4,.search h3 {
+    margin:0;
+    display:inline-block;
+    font-family: inherit;
+    padding: 0 10px;
+}
+#blue-ribbon {
+    background-color: #34ace0;
+    text-align:left;
+    padding: 15px;
+    vertical-align: middle;
+    color: #fff;
+}
+h3#searchTitle {
+    padding-right: 20px; 
+}
+.jumbotron {
+    margin-bottom:0;
+}
+.search * {
+    vertical-align: middle;
+}
+.search .form-control {
+    width: 200px;
+    border-radius: 3px;
+    display:inline-block;
+}
+.btn-outline-secondary {
+    background-color: #fff;
+    display:inline-block;
+}
+.catalogH3 {
+    padding: 10px 0;
+}
+.card {
+    width: 100%;
+    max-width: 300px;
+    text-align:left;
+    margin: 5px;
+    border: 1px solid #ccc;
+}
+.card-group {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin:0 auto;
+}
+.imgContainer {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+</style>
 </head>
 <body>
     <div align="center">
@@ -13,14 +71,32 @@
             <h1>MSU Blockchain Store</h1>
             <p>Welcome to the MSU Blockchain Store.</p>
         </div>
-        <br/>
-
-        <h3><i>Catalog</i></h3>
-
+        <div id="blue-ribbon">
+            <div class="search">
+                <h3 id="searchTitle"><i>Search for transaction</i></h3>
+                <div class="search">
+                    <h4>ID:</h4>
+                        <input type="text" class="form-control" aria-label="TransactionID">
+                        <button id="idSearch" class="btn btn-outline-secondary" type="button">Search</button>
+                </div>
+            </div>
+    
+            <div class="search">
+                <h4>Date Range:</h4>
+                   <input id="startDate" type="date" class="form-control" aria-label="date" placeholder="Start Date"/>
+                   <input id="endDate" type="date" class="form-control" aria-label="date" placeholder="End Date"/>
+    
+                        <button id="dateSearch" class="btn btn-outline-secondary" type="button">Search</button>
+                 
+            </div>
+        </div>
+        <h3 class="catalogH3"><i>Catalog</i></h3>
         <div class="store">
             <div class="card-group">
                 <div class="card centered-card">
-                    <img src="food.jpg" class="card-img-top" width="500" height="500"/>
+                    <div class="imgContainer" style="background-image: url('food.jpg');">
+
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Food</h5>
                         <p class="card-text">$5</p>
@@ -33,7 +109,8 @@
                     <a class="btn btn-primary btn-lg" href="#" role="button">Purchase</a>
                 </div>
                 <div class="card">
-                    <img src="book.jpg" class="card-img-top" width="500" height="500"/>
+                    <div class="imgContainer" style="background-image: url('book.jpg');">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Book</h5>
                         <p class="card-text">$12</p>
@@ -46,7 +123,9 @@
                     <a class="btn btn-primary btn-lg" href="#" role="button">Purchase</a>
                 </div>
                 <div class="card">
-                    <img src="drink.png" class="card-img-top" width="500" height="500"/>
+                    <div class="imgContainer" style="background-image: url('drink.png');">
+
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Drink</h5>
                         <p class="card-text">$2</p>
@@ -61,37 +140,8 @@
             </div>
         </div>
         <br/>
-        <div class="search">
-            <h3><i>Search for transaction</i></h3>
-            <br/>
-
-            <div class="search">
-                <h4>ID:</h4>
-                <div class="input-group mb-3 col-3">
-                    <input type="text" class="form-control" aria-label="TransactionID">
-                    <div class="input-group-prepend">
-                        <button id="idSearch" class="btn btn-outline-secondary" type="button">Search</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="search">
-                <h4>Date Range:</h4>
-                <div class="input-group mb-3 col-3">
-                   <input id="startDate" type="date" class="form-control" aria-label="date" placeholder="Start Date"/>
-                   <input id="endDate" type="date" class="form-control" aria-label="date" placeholder="End Date"/>
-
-                    <div class="input-group-prepend">
-                        <button id="dateSearch" class="btn btn-outline-secondary" type="button">Search</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </div>
-
     <script src="https://unpkg.com/js-datepicker">
-
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
