@@ -9,16 +9,18 @@ app.get('/', function(req, res){
 });
 
 app.get('/purchase', function(req, res){
-    podChain.addBlock(new Block(this.getLatestBlock().index + 1, Date(), res.body.price));
-    res.send("Hello world!");
+    podChain.addBlock(new Block(this.getLatestBlock().index + 1, Date(), req.body.price));
+    res.send("Success");
 });
 
 app.get('/searchID', function(req, res){
-    res.send("Hello world!");
+    const tempBlock = podChain.findID(req.body.userID);
+    res.send(tempBlock);
 });
 
 app.get('/searchDates', function(req, res){
-    res.send("Hello world!");
+    const tempList = podChain.findDates(res.body.startDate, res.body.endDate);
+    res.send(tempList)
 });
 
 app.listen(3000);
