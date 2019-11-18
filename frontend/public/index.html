@@ -65,22 +65,28 @@
             <h3><i>Search for transaction</i></h3>
             <br/>
 
-            <div class="id-search">
+            <div class="search">
                 <h4>ID:</h4>
                 <div class="input-group mb-3 col-3">
                     <input type="text" class="form-control" aria-label="TransactionID">
+                    <div class="input-group-prepend">
+                        <button id="idSearch" class="btn btn-outline-secondary" type="button">Search</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="date-search">
+            <div class="search">
                 <h4>Date Range:</h4>
                 <div class="input-group mb-3 col-3">
                    <input id="startDate" type="date" class="form-control" aria-label="date" placeholder="Start Date"/>
                    <input id="endDate" type="date" class="form-control" aria-label="date" placeholder="End Date"/>
+
+                    <div class="input-group-prepend">
+                        <button id="dateSearch" class="btn btn-outline-secondary" type="button">Search</button>
+                    </div>
                 </div>
             </div>
 
-            <a class="btn btn-primary btn-lg" href="#" role="button">Search</a>
         </div>
     </div>
 
