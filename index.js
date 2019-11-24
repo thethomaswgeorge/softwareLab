@@ -16,6 +16,7 @@ router.get("/",function(req,res){
 
 // GET /style.css etc
 app.use(express.static(__dirname + '/resources'));
+app.use(express.static(__dirname + '/public'));
 
 app.use("/", router);
 
