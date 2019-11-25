@@ -55,7 +55,6 @@ function searchByDate(){
 
 function purchase(){
     $purchaseButton.click(function(){
-
         let price = $purchaseButton[0].getAttribute("price");
         console.log(price);
         console.log("purchase button clicked");
