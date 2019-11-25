@@ -6,7 +6,6 @@ let main = function(){
             searchByDate();
         });
     });
-
 }();
 
 let url = "http://localhost:3001";
@@ -57,7 +56,7 @@ function purchase(){
     $purchaseButton.click(function(){
         console.log("purchase button clicked");
         $.ajax({
-            url: url + "purchase?price=3", // everything after ? is parameter that is being passed to route. the number should come from the
+            url: url + "/purchase?price=3", // everything after ? is parameter that is being passed to route. the number should come from the
             // item being purchased
             method: 'POST',
             crossDomain: true,
