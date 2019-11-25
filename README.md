@@ -4,5 +4,5 @@
 
 ## Blockchain ##
 ====================================================================
-https://www.savjee.be/2017/07/Writing-tiny-blockchain-in-JavaScript/
+[Reference 1](https://www.savjee.be/2017/07/Writing-tiny-blockchain-in-JavaScript/)
 ====================================================================
