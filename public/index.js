@@ -14,7 +14,7 @@ let url = "http://localhost:3001";
 
 let $idSearchButton = $('#idSearch');
 let $dateSearchButton = $('#dateSearch');
-let $purchaseButton = $('#purchase');
+let $purchaseButton = $('.purchasebtn');
 
 //
 function searchById(){
@@ -57,7 +57,8 @@ function purchase(){
     $purchaseButton.click(function(){
         console.log("purchase button clicked");
         $.ajax({
-            url: url,
+            url: url + "purchase?price=3", // everything after ? is parameter that is being passed to route. the number should come from the
+            // item being purchased
             method: 'POST',
             crossDomain: true,
             header: {"Access-Control-Allow-Origin": true},
